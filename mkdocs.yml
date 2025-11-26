@@ -48,7 +48,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: white             # Clean white navbar for professional look
-      accent: amber              # Warm amber accents complement orange brand
+      accent: deep orange        # Deep orange for links, active states, brand consistency
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -57,13 +57,14 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black             # Dark navbar compatible with slate background
-      accent: amber              # Warm amber for consistent brand palette
+      accent: deep orange        # Deep orange for links, active states, brand consistency
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
 
 markdown_extensions:
   - attr_list
+  - md_in_html
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -116,8 +117,10 @@ nav:
   - Mobility:
     - Overview: mobility/index.md
     - Installation: mobility/installation.md
+    - Features: mobility/features.md
     - Configuration: mobility/configuration.md
     - User Guide: mobility/user-guide.md
+    - API Reference: mobility/api-reference.md
   - TinyShop:
     - Overview: tinyshop/index.md
     - Setup Guide: tinyshop/setup.md
