@@ -1,30 +1,66 @@
-site_name: My MkDocs Material Documentation
-site_url: https://sitename.example
+site_name: Thinesoft Docs
+site_url: https://bode683.github.io/thinesoft-mkdocs/
 theme:
   name: material
   font:
     text: Merriweather Sans
     code: Red Hat Mono
-  logo: assets/logo.png
+  logo: assets/thinesoft_logo.jpg
   favicon: assets/favicon.ico
-  features:
-    - navigation.footer
-  palette:
-    # Dark Mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Dark mode
-      primary: green
-      accent: deep purple
 
-    # Light Mode
-    - scheme: default
+  # Professional features for corporate appearance
+  features:
+    # Navigation enhancements
+    - navigation.instant        # Instant loading for SPA-like experience
+    - navigation.instant.prefetch  # Prefetch pages on hover
+    - navigation.instant.progress  # Progress indicator
+    - navigation.tracking       # Update URL with active anchor
+    - navigation.tabs           # Top-level sections as tabs
+    - navigation.tabs.sticky    # Tabs remain visible when scrolling
+    - navigation.sections       # Render top-level sections as groups
+    - navigation.expand         # Expand all collapsible sections by default
+    - navigation.path           # Breadcrumb navigation
+    - navigation.indexes        # Section index pages
+    - navigation.top            # Back to top button
+    - navigation.footer         # Footer navigation
+
+    # Search enhancements
+    - search.suggest            # Search suggestions
+    - search.highlight          # Highlight search terms in results
+    - search.share              # Share search results
+
+    # Header behavior
+    - header.autohide           # Hide header when scrolling down
+
+    # Content features
+    - content.code.copy         # Copy button for code blocks
+    - content.code.annotate     # Annotations in code blocks
+    - content.tabs.link         # Link content tabs across pages
+    - content.tooltips          # Improved tooltips
+
+    # Table of contents
+    - toc.follow                # TOC follows scroll position
+    - toc.integrate             # Integrate TOC into navigation
+
+  # Professional color palette matching Thinesoft branding
+  palette:
+    # Light Mode - Clean and professional with subtle navbar
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white             # Clean white navbar for professional look
+      accent: amber              # Warm amber accents complement orange brand
       toggle:
-        icon: material/weather-night
-        name: Light mode
-      primary: blue
-      accent: deep orange
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Dark Mode - Subtle dark navbar with orange accents
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black             # Dark navbar compatible with slate background
+      accent: amber              # Warm amber for consistent brand palette
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 markdown_extensions:
   - attr_list
@@ -50,8 +86,43 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/youtube
-      link: https://youtube.com/@james-willett
+      link: https://youtube.com/@thinesoft
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/willettjames
+      link: https://linkedin.com/in/thinesoft
+    - icon: fontawesome/brands/github
+      link: https://github.com/itlds-cmr
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/thinesoft
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/thinesoft
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/thinesoft
+    - icon: fontawesome/brands/whatsapp
+      link: https://whatsapp.com/thinesoft
+    - icon: fontawesome/brands/telegram
+      link: https://telegram.com/thinesoft
 
-copyright: Copyright &copy; 2024 James Willett
+copyright: Copyright &copy; 2025 Thinesoft
+
+nav:
+  - Home: index.md
+  - WiWebb:
+    - Overview: wiwebb/index.md
+    - Getting Started: wiwebb/getting-started.md
+    - User Guide:
+      - Overview: wiwebb/user-guide/overview.md
+      - Features: wiwebb/user-guide/features.md
+    - API Reference: wiwebb/api-reference.md
+  - Mobility:
+    - Overview: mobility/index.md
+    - Installation: mobility/installation.md
+    - Configuration: mobility/configuration.md
+    - User Guide: mobility/user-guide.md
+  - TinyShop:
+    - Overview: tinyshop/index.md
+    - Setup Guide: tinyshop/setup.md
+    - User Guide: tinyshop/user-guide.md
+    - Configuration: tinyshop/configuration.md
+  - Resources:
+    - Support: shared/support.md
+    - About Thinesoft: shared/about.md
