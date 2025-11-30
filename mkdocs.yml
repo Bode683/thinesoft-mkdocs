@@ -48,6 +48,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: white # Clean white navbar for professional look
+      accent: orange # Orange accent for interactive elements
       # Note: Custom orange colors defined in extra.css to match thinesoft
       toggle:
         icon: material/brightness-7
@@ -57,6 +58,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black # Dark navbar compatible with slate background
+      accent: deep orange # Orange accent for interactive elements in dark mode
       # Note: Custom orange colors defined in extra.css to match brand colors
       toggle:
         icon: material/brightness-4
@@ -65,6 +67,7 @@ theme:
 markdown_extensions:
   - attr_list
   - md_in_html
+  - tables
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -112,11 +115,57 @@ nav:
   - Home: index.md
   - WiWebb:
       - Overview: wiwebb/index.md
-      - Getting Started: wiwebb/getting-started.md
+      - Getting Started:
+          - Overview: wiwebb/getting-started/index.md
+          - Installation: wiwebb/getting-started/installation.md
+          - Quick Start: wiwebb/getting-started/quick-start.md
+          - Configuration: wiwebb/getting-started/configuration.md
+      - Architecture:
+          - Overview: wiwebb/architecture/overview.md
+          - Backend: wiwebb/architecture/backend.md
+          - Frontend: wiwebb/architecture/frontend.md
+          - Database Schema: wiwebb/architecture/database-schema.md
+          - Authentication: wiwebb/architecture/authentication.md
+          - Multi-Tenancy: wiwebb/architecture/multi-tenancy.md
       - User Guide:
-          - Overview: wiwebb/user-guide/overview.md
-          - Features: wiwebb/user-guide/features.md
-      - API Reference: wiwebb/api-reference.md
+          - Organizations:
+              - Tenants: wiwebb/user-guide/organizations/tenants.md
+              - Users: wiwebb/user-guide/organizations/users.md
+              - Roles & Permissions: wiwebb/user-guide/organizations/roles.md
+          - Network:
+              - RADIUS Server: wiwebb/user-guide/network/radius.md
+              - VPN: wiwebb/user-guide/network/vpn.md
+              - Hotspots: wiwebb/user-guide/network/hotspots.md
+              - Monitoring: wiwebb/user-guide/network/monitoring.md
+          - IP Management:
+              - Subnets: wiwebb/user-guide/ipam/subnets.md
+              - IP Addresses: wiwebb/user-guide/ipam/addresses.md
+          - Certificates:
+              - Authorities: wiwebb/user-guide/certificates/authorities.md
+              - Certificates: wiwebb/user-guide/certificates/certificates.md
+          - Billing:
+              - Plans: wiwebb/user-guide/billing/plans.md
+              - Payments: wiwebb/user-guide/billing/payments.md
+              - Usage Limits: wiwebb/user-guide/billing/limits.md
+      - API Reference:
+          - Authentication: wiwebb/api-reference/authentication.md
+          - Tenants: wiwebb/api-reference/tenants.md
+          - Users: wiwebb/api-reference/users.md
+          - Subscriptions: wiwebb/api-reference/subscriptions.md
+          - Payments: wiwebb/api-reference/payments.md
+          - Models: wiwebb/api-reference/models.md
+      - Mobile App:
+          - Overview: wiwebb/mobile-app/overview.md
+          - Installation: wiwebb/mobile-app/installation.md
+          - Features: wiwebb/mobile-app/features.md
+      - Development:
+          - Setup: wiwebb/development/setup.md
+          - Frontend Development: wiwebb/development/frontend.md
+          - Backend Development: wiwebb/development/backend.md
+          - Contributing: wiwebb/development/contributing.md
+      - Troubleshooting:
+          - Common Issues: wiwebb/troubleshooting/common-issues.md
+          - FAQ: wiwebb/troubleshooting/faq.md
   - Mobility:
       - Overview: mobility/index.md
       - Installation: mobility/installation.md
