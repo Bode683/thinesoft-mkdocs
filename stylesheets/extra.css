@@ -1,0 +1,244 @@
+/**
+ * Custom color scheme matching OpenWISP documentation
+ * Based on OpenWISP's light and dark mode color palettes
+ */
+
+/* ==================== Logo Switching for Light/Dark Mode ==================== */
+/* Light mode - keep logo as-is (orange on white background) */
+[data-md-color-scheme="default"] .md-header__button.md-logo img,
+[data-md-color-scheme="default"] .md-logo img {
+  filter: none;
+}
+
+/* Dark mode - invert logo colors for better visibility on dark background */
+[data-md-color-scheme="slate"] .md-header__button.md-logo img,
+[data-md-color-scheme="slate"] .md-logo img {
+  filter: brightness(0) invert(1);
+  /* This will make the orange text white and the white background transparent/dark */
+}
+
+/* ==================== Light Mode Colors ==================== */
+[data-md-color-scheme="default"] {
+  /* Primary colors - text and backgrounds */
+  --md-default-fg-color: #0f1729;
+  --md-default-bg-color: #ffffff;
+
+  /* Primary accent color (orange) */
+  --md-primary-fg-color: #ffffff;
+  --md-primary-fg-color--light: #f1f5f9;
+  --md-primary-fg-color--dark: #e36914;
+
+  /* Accent color for links and buttons */
+  --md-accent-fg-color: #e36914;
+  --md-accent-fg-color--transparent: rgba(227, 105, 20, 0.1);
+
+  /* Link colors */
+  --md-typeset-a-color: #b15210;
+
+  /* Code blocks */
+  --md-code-bg-color: #F8F8F8;
+  --md-code-fg-color: #0f1729;
+
+  /* Sidebar */
+  --md-default-fg-color--light: #475467;
+  --md-default-fg-color--lighter: rgb(241, 245, 249);
+  --md-default-fg-color--lightest: #f1f5f9;
+
+  /* Admonitions */
+  --md-admonition-bg-color: #f0f9ff;
+  --md-admonition-fg-color: rgba(12, 74, 110, 1);
+
+  /* Current/Active link */
+  --md-typeset-mark-color: rgba(202, 94, 18, 0.1);
+}
+
+/* ==================== Dark Mode Colors ==================== */
+[data-md-color-scheme="slate"] {
+  /* Primary colors - text and backgrounds */
+  --md-default-fg-color: #e0e0e0;
+  --md-default-bg-color: #020614;
+
+  /* Primary accent color (orange) */
+  --md-primary-fg-color: #020614;
+  --md-primary-fg-color--light: rgba(60, 60, 60, 0.5);
+  --md-primary-fg-color--dark: #ef7f2f;
+
+  /* Accent color for links and buttons */
+  --md-accent-fg-color: #ef7f2f;
+  --md-accent-fg-color--transparent: rgba(239, 127, 47, 0.1);
+
+  /* Link colors */
+  --md-typeset-a-color: #ff9d5c;
+
+  /* Code blocks */
+  --md-code-bg-color: #2c2c2c;
+  --md-code-fg-color: #e0e0e0;
+
+  /* Sidebar */
+  --md-default-fg-color--light: #b0b0b0;
+  --md-default-fg-color--lighter: rgba(60, 60, 60, 0.5);
+  --md-default-fg-color--lightest: rgba(60, 60, 60, 0.3);
+
+  /* Admonitions */
+  --md-admonition-bg-color: #2c2c2c;
+  --md-admonition-fg-color: #b0d4ff;
+
+  /* Current/Active link */
+  --md-typeset-mark-color: rgba(238, 127, 49, 0.1);
+}
+
+/* ==================== Link Hover States ==================== */
+/* Light mode link hover */
+[data-md-color-scheme="default"] a:hover {
+  color: #e36914 !important;
+}
+
+[data-md-color-scheme="default"] .md-nav__link:hover {
+  color: #e36914;
+}
+
+[data-md-color-scheme="default"] .md-nav__link--active {
+  color: #ca5e12;
+}
+
+/* Dark mode link hover */
+[data-md-color-scheme="slate"] a:hover {
+  color: #ee7f31 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: #ee7f31;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: #ee7f31;
+}
+
+/* ==================== Button Styles ==================== */
+/* Light mode buttons */
+[data-md-color-scheme="default"] .md-button {
+  background-color: #e36914;
+  border-color: #e36914;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="default"] .md-button:hover,
+[data-md-color-scheme="default"] .md-button:focus {
+  background-color: #ca5e11;
+  border-color: #ca5e11;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="default"] .md-button--primary {
+  background-color: #e36914;
+  border-color: #e36914;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="default"] .md-button--primary:hover,
+[data-md-color-scheme="default"] .md-button--primary:focus {
+  background-color: #ca5e11;
+  border-color: #ffffff;
+}
+
+/* Dark mode buttons */
+[data-md-color-scheme="slate"] .md-button {
+  background-color: #ef7f2f;
+  border-color: #ef7f2f;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-button:hover,
+[data-md-color-scheme="slate"] .md-button:focus {
+  background-color: #ff9d5c;
+  border-color: #ff9d5c;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-button--primary {
+  background-color: #ef7f2f;
+  border-color: #ef7f2f;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-button--primary:hover,
+[data-md-color-scheme="slate"] .md-button--primary:focus {
+  background-color: #ff9d5c;
+  border-color: #ff9d5c;
+}
+
+/* ==================== Header Links ==================== */
+/* Light mode header */
+[data-md-color-scheme="default"] .md-header__title,
+[data-md-color-scheme="default"] .md-header__topic {
+  color: #475467;
+}
+
+/* Dark mode header */
+[data-md-color-scheme="slate"] .md-header__title,
+[data-md-color-scheme="slate"] .md-header__topic {
+  color: #b0b0b0;
+}
+
+/* ==================== Sidebar Styling ==================== */
+/* Light mode sidebar */
+[data-md-color-scheme="default"] .md-sidebar {
+  background-color: rgb(241, 245, 249);
+}
+
+/* Dark mode sidebar */
+[data-md-color-scheme="slate"] .md-sidebar {
+  background-color: rgba(60, 60, 60, 0.5);
+}
+
+/* ==================== Downloads/External Links ==================== */
+/* Light mode downloads/external links */
+[data-md-color-scheme="default"] .md-typeset a[href^="http"]::after,
+[data-md-color-scheme="default"] .md-typeset .external-link {
+  color: #1f78d1;
+}
+
+/* Dark mode downloads/external links */
+[data-md-color-scheme="slate"] .md-typeset a[href^="http"]::after,
+[data-md-color-scheme="slate"] .md-typeset .external-link {
+  color: #67b3ff;
+}
+
+/* ==================== Search Highlighting ==================== */
+[data-md-color-scheme="default"] .md-search__input:focus,
+[data-md-color-scheme="default"] .md-search-result__link:hover {
+  background-color: rgba(227, 105, 20, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-search__input:focus,
+[data-md-color-scheme="slate"] .md-search-result__link:hover {
+  background-color: rgba(239, 127, 47, 0.1);
+}
+
+/* ==================== Table of Contents ==================== */
+[data-md-color-scheme="default"] .md-nav__link--active,
+[data-md-color-scheme="default"] .md-nav__link.md-nav__link--active {
+  color: #ca5e12;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__link.md-nav__link--active {
+  color: #ee7f31;
+}
+
+/* ==================== Code Copy Button ==================== */
+[data-md-color-scheme="default"] .md-clipboard {
+  color: #b15210;
+}
+
+[data-md-color-scheme="default"] .md-clipboard:hover {
+  color: #e36914;
+}
+
+[data-md-color-scheme="slate"] .md-clipboard {
+  color: #ff9d5c;
+}
+
+[data-md-color-scheme="slate"] .md-clipboard:hover {
+  color: #ee7f31;
+}
